@@ -1,50 +1,46 @@
 ﻿@model NotUygulamasi.Models.Not
 
-@{
-    ViewData["Title"] = "Edit";
-}
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/Edit.css">
+</head>
+<body>
+    <h1>Düzenle</h1>
 
-<h1>Edit</h1>
-
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="NotId" />
-            <div class="form-group">
-                <label asp-for="Baslik" class="control-label"></label>
-                <input asp-for="Baslik" class="form-control" />
-                <span asp-validation-for="Baslik" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Icerik" class="control-label"></label>
-                <textarea asp-for="Icerik" class="form-control"></textarea>
-                <span asp-validation-for="Icerik" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="TamamlanmaDurumu" class="control-label"></label>
-                <input asp-for="TamamlanmaDurumu" class="form-control" />
-                <span asp-validation-for="TamamlanmaDurumu" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="SonDuzenlemeTarihi" class="control-label"></label>
-                <input asp-for="SonDuzenlemeTarihi" class="form-control" readonly />
-                <span asp-validation-for="SonDuzenlemeTarihi" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="NotId" />
+                <div class="form-group">
+                    <label for="Baslik">Başlık</label>
+                    <input type="text" id="Baslik" name="Baslik" value="@Html.DisplayFor(model => model.Baslik)" class="form-control" />
+                    <span class="text-danger">@Html.ValidationMessageFor(model => model.Baslik)</span>
+                </div>
+                <div class="form-group">
+                    <label for="Icerik">İçerik</label>
+                    <textarea id="Icerik" name="Icerik" class="form-control">@Html.DisplayFor(model => model.Icerik)</textarea>
+                    <span class="text-danger">@Html.ValidationMessageFor(model => model.Icerik)</span>
+                </div>
+                <div class="form-group">
+                    <label for="SonDuzenlemeTarihi">Son Düzenleme Tarihi</label>
+                    <input type="text" id="SonDuzenlemeTarihi" name="SonDuzenlemeTarihi" value="@Html.DisplayFor(model => model.SonDuzenlemeTarihi)" class="form-control" readonly />
+                    <span class="text-danger">@Html.ValidationMessageFor(model => model.SonDuzenlemeTarihi)</span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Kaydet" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
     </div>
-</div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+    <div>
+        <a asp-action="Index" class="back-link">Listeye Geri Dön</a>
+    </div>
 
-@section Scripts {
-    @{
-        await Html.RenderPartialAsync("_ValidationScriptsPartial");
-    }
-}
-}
+</body>
+</html>

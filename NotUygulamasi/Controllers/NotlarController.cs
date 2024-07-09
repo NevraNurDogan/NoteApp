@@ -16,6 +16,7 @@ namespace NotUygulamasi.Controllers
         {
             _context = context;
         }
+ 
         public async Task<IActionResult> Index()
         {
             return View(await _context.Notlar.ToListAsync());
@@ -40,10 +41,9 @@ namespace NotUygulamasi.Controllers
         {
             return View();
         }
-        [HttpPost]
+  
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("NotId,Baslik,Icerik,TamamlanmaDurumu")] Not not)
         {
             if (ModelState.IsValid)
@@ -56,7 +56,6 @@ namespace NotUygulamasi.Controllers
             }
             return View(not);
         }
-
 
         public async Task<IActionResult> Edit(int? id)
         {
@@ -135,3 +134,4 @@ namespace NotUygulamasi.Controllers
         }
     }
 }
+ 

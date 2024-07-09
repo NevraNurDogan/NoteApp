@@ -9,7 +9,6 @@ namespace NotUygulamasi.Data
             : base(options)
         {
         }
-
         public DbSet<Not> Notlar { get; set; }
     }
 }

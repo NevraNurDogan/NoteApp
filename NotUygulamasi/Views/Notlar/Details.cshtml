@@ -1,48 +1,50 @@
 ﻿@model NotUygulamasi.Models.Not
 
-@{
-    ViewData["Title"] = "Details";
-}
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/Details.css">
+</head>
+<body>
+    <h1>Detaylar</h1>
+   
+    <div class="not-details">
+        <h4>Not</h4>
+        <hr />
+        <div class="row">
+            <div class="col-sm-2">
+                <strong>Başlık</strong>
+            </div>
+            <div class="col-sm-10">
+                @Html.DisplayFor(model => model.Baslik)
+            </div>
+            <div class="col-sm-2">
+                <strong>İçerik</strong>
+            </div>
+            <div class="col-sm-10">
+                @Html.DisplayFor(model => model.Icerik)
+            </div>
+            <div class="col-sm-2">
+                <strong>Oluşturma Tarihi</strong>
+            </div>
+            <div class="col-sm-10">
+                @Html.DisplayFor(model => model.OlusturmaTarihi)
+            </div>
+            <div class="col-sm-2">
+                <strong>Son Düzenleme Tarihi</strong>
+            </div>
+            <div class="col-sm-10">
+                @Html.DisplayFor(model => model.SonDuzenlemeTarihi)
+            </div>
+        </div>
+    </div>
 
-<h1>Details</h1>
+    <div>
+        <a asp-action="Index" class="back-link">Listeye Geri Dön</a>
+    </div>
 
-<div>
-    <h4>Not</h4>
-    <hr />
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Baslik)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Baslik)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Icerik)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Icerik)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.OlusturmaTarihi)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.OlusturmaTarihi)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.SonDuzenlemeTarihi)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.SonDuzenlemeTarihi)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.TamamlanmaDurumu)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.TamamlanmaDurumu)
-        </dd>
-    </dl>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+</body>
+</html>

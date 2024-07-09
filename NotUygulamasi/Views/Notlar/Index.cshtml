@@ -1,60 +1,49 @@
 ﻿@model IEnumerable<NotUygulamasi.Models.Not>
 
-@{
-    ViewData["Title"] = "Index";
-}
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/Index.css">
+</head>
+<body>
+    
+    <p>
+        <a asp-action="Create" class="btn btn-primary">Yeni Not Oluştur </a>
+    </p>
 
-<h1>Index</h1>
-
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Baslik)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Icerik)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.OlusturmaTarihi)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.SonDuzenlemeTarihi)
-            </th>
-            <th>
-
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
+    <table class="table">
+        <thead>
             <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Baslik)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Icerik)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.OlusturmaTarihi)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.SonDuzenlemeTarihi)
-                </td>
-                <td>
-                 
-                </td>
-                <td>
-                    <a asp-action="Details" asp-route-id="@item.NotId">Details</a> |
-                    <a asp-action="Edit" asp-route-id="@item.NotId">Edit</a> |
-                    <a asp-action="Delete" asp-route-id="@item.NotId">Delete</a>
-                </td>
+                <th>Başlık</th>
+                <th>İçerik</th>
+                <th>Oluşturma Tarihi</th>
+                <th>Son Düzenleme Tarihi</th>
+         
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.Baslik)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Icerik)</td>
+                    <td>@Html.DisplayFor(modelItem => item.OlusturmaTarihi)</td>
+                    <td>@Html.DisplayFor(modelItem => item.SonDuzenlemeTarihi)</td>
+                    <td>
+                        <a asp-action="Details" asp-route-id="@item.NotId" class="btn btn-info">Detaylar</a>
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.NotId" class="btn btn-warning">Düzenle</a>
+                        <a asp-action="Delete" asp-route-id="@item.NotId" class="btn btn-danger">Sil</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+   
+</body>
+</html>
