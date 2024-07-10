@@ -2,9 +2,6 @@
 using Microsoft.EntityFrameworkCore;
 using NotUygulamasi.Data;
 using NotUygulamasi.Models;
-using System;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace NotUygulamasi.Controllers
 {
@@ -132,6 +129,33 @@ namespace NotUygulamasi.Controllers
         {
             return _context.Notlar.Any(e => e.NotId == id);
         }
+
+        [HttpGet]
+        public IActionResult Login()
+        {
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> Login(Kullanici model)
+        {
+            if (ModelState.IsValid)
+            {
+                var kullanici = await _context.Kullanicilar.FirstOrDefaultAsync(u => u.KullaniciAdi == model.KullaniciAdi && u.Sifre == model.Sifre);
+
+                if (kullanici != null)
+                {
+                    // Başarılı giriş durumunda yönlendirme örneği
+                    return RedirectToAction("Index", "Notlar");
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Geçersiz kullanıcı adı veya şifre.");
+                }
+            }
+            return View(model);
+        }
+
     }
 }
+
  

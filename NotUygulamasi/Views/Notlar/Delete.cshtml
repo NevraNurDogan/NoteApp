@@ -1,4 +1,7 @@
 ﻿@model NotUygulamasi.Models.Not
+@{
+    ViewData["Title"] = "Delete";
+}
 
 <!DOCTYPE html>
 <html lang="tr">
@@ -44,7 +47,7 @@
 
     <form asp-action="Delete" class="delete-form">
         <input type="hidden" asp-for="NotId" />
-        <input type="submit" value="Sil" class="delete-button" /> |
+        <input type="submit" value="Sil" class="delete-button" />
         <a asp-action="Index" class="back-link">Listeye Geri Dön</a>
     </form>
 

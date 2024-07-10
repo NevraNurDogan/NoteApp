@@ -5,6 +5,26 @@
       "PackagePath": "staticwebassets\\NotUygulamasi.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Casper\\OneDrive\\Masaüstü\\C#\\NotUygulamasi\\wwwroot\\css\\Create.css",
+      "PackagePath": "staticwebassets\\css\\Create.css"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\OneDrive\\Masaüstü\\C#\\NotUygulamasi\\wwwroot\\css\\Delete.css",
+      "PackagePath": "staticwebassets\\css\\Delete.css"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\OneDrive\\Masaüstü\\C#\\NotUygulamasi\\wwwroot\\css\\Details.css",
+      "PackagePath": "staticwebassets\\css\\Details.css"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\OneDrive\\Masaüstü\\C#\\NotUygulamasi\\wwwroot\\css\\Edit.css",
+      "PackagePath": "staticwebassets\\css\\Edit.css"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\OneDrive\\Masaüstü\\C#\\NotUygulamasi\\wwwroot\\css\\Index.css",
+      "PackagePath": "staticwebassets\\css\\Index.css"
+    },
+    {
       "Id": "C:\\Users\\Casper\\OneDrive\\Masaüstü\\C#\\NotUygulamasi\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

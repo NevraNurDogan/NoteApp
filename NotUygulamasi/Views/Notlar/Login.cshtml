@@ -1,0 +1,23 @@
+﻿@model NotUygulamasi.Models.Kullanici
+
+@{
+    ViewData["Title"] = "Giriş Yap";
+}
+
+<h2>Giriş Yap</h2>
+
+<form asp-action="Login" method="post">
+    <div>
+        <label asp-for="KullaniciAdi"></label>
+        <input asp-for="KullaniciAdi" />
+        <span asp-validation-for="KullaniciAdi"></span>
+    </div>
+
+    <div>
+        <label asp-for="Sifre"></label>
+        <input asp-for="Sifre" type="password" />
+        <span asp-validation-for="Sifre"></span>
+    </div>
+
+    <button type="submit">Giriş Yap</button>
+</form>

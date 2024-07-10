@@ -10,5 +10,6 @@ namespace NotUygulamasi.Data
         {
         }
         public DbSet<Not> Notlar { get; set; }
+        public DbSet<Kullanici> Kullanicilar { get; set; }
     }
 }

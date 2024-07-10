@@ -7,6 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\css\Create.css" />
+    <None Include="wwwroot\css\Details.css" />
+    <None Include="wwwroot\css\Edit.css" />
+    <None Include="wwwroot\css\Index.css" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="EntityFramework" Version="6.5.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Abstractions" Version="8.0.6" />

@@ -1,0 +1,61 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    margin: 0; /* dış kenar boşluğunu */
+    padding: 0; /* iç kenar boşluğunu */
+    background-color: #E1FFD2; /*arka plan rengini */
+}
+
+h1 {
+    text-align: center; /* Metni yatay olarak ortalar*/
+    color: black;
+    margin-top: 20px;
+}
+
+.form-container {
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #FFCE20;
+    border-radius: 10px;
+}
+
+.form-group {
+    margin-bottom: 25px;/*elemanları dikey olarak aralar*/
+}
+
+.control-label {
+    display: block;
+    margin-bottom: 5px;/*alt tarafta boşluk*/
+    font-weight: bold;
+}
+
+.form-control {
+    width: 100%;
+    padding: 8px;/*iç kenar boşluğu*/
+    border: 3px solid #FF8100;
+    border-radius: 4px;/*yuvarlar kenarları*/
+}
+
+
+.submit-button {
+    padding: 10px 15px;
+    color: black;
+    background-color: #FF8100;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;/*tıklanabilir olduğunu gösterir*/
+}
+
+    .submit-button:hover {
+        background-color: cornflowerblue;
+    }
+
+.back-link {
+    display: block;
+    text-align: center;/*yatay ortalar*/
+    margin-top: 15px;
+    color: #FF8100;
+    text-decoration: none;/*bağlantının altını çizer*/
+}
+
+   
